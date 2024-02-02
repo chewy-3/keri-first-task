@@ -1,0 +1,141 @@
+<ion-header [translucent]="true">
+
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col>
+        <h1>My trips</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="auto">
+        <ion-segment value="ongoing" (ionChange)="onFilterUpdate($event)">
+          <ion-segment-button value="ongoing">
+            <ion-label>Ongoing</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="past">
+            <ion-label>Past</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="cancelled">
+            <ion-label>Canceled</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <div *ngIf="selectedSegment === 'ongoing'">
+      <ion-row>
+        <ion-col class="ion-no-padding">
+          <ion-card>
+            <ion-card-content class="ion-text-start ion-padding">
+              No bookings available.
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div *ngIf="selectedSegment === 'past'">
+      <ion-row>
+        <ion-col class="ion-no-padding">
+          <ion-card class="custom-card-margin">
+            <ion-card-header class="custom-card-padding">
+              <ion-item class="ion-no-padding ion-no-margin">
+                <ion-label>PADALA</ion-label>
+                <ion-label class="ion-text-end" color="danger">Nov 13, 2023</ion-label>
+              </ion-item>
+            </ion-card-header>
+
+            <ion-card-content class="past-ion-card-content">
+              <ion-card-title>
+                <ion-icon name="location-sharp" class="location-icon"></ion-icon><span style="color: #a11b1f;">Vince LEX
+                  QA</span></ion-card-title>
+              MCDDC Chapel, Calamba, Laguna, Philippines
+            </ion-card-content>
+            <ion-card-content class="past-ion-card-content">
+              <ion-card-title><ion-icon name="cube-outline" class="box-icon"></ion-icon>test</ion-card-title>
+              Mayapa, Calamba, Laguna, Philippines
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-no-padding">
+          <ion-card class="custom-card-margin">
+            <ion-card-header class="custom-card-padding">
+              <ion-item class="ion-no-padding ion-no-margin">
+                <ion-label>PADALA</ion-label>
+                <ion-label class="ion-text-end" color="danger">Nov 13, 2023</ion-label>
+              </ion-item>
+            </ion-card-header>
+
+            <ion-card-content class="past-ion-card-content">
+              <ion-card-title>
+                <ion-icon name="location-sharp" class="location-icon"></ion-icon><span style="color: #a11b1f;">Vince LEX
+                  QA</span></ion-card-title>
+              MCDDC Chapel, Calamba, Laguna, Philippines
+            </ion-card-content>
+            <ion-card-content class="past-ion-card-content">
+              <ion-card-title><ion-icon name="cube-outline" class="box-icon"></ion-icon>test</ion-card-title>
+              Mayapa, Calamba, Laguna, Philippines
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-no-padding">
+          <ion-card class="custom-card-margin">
+            <ion-card-header class="custom-card-padding">
+              <ion-item class="ion-no-padding ion-no-margin">
+                <ion-label>PADALA</ion-label>
+                <ion-label class="ion-text-end" color="danger">Nov 13, 2023</ion-label>
+              </ion-item>
+            </ion-card-header>
+
+            <ion-card-content class="past-ion-card-content">
+              <ion-card-title>
+                <ion-icon name="location-sharp" class="location-icon"></ion-icon><span style="color: #a11b1f;">Vince LEX
+                  QA</span></ion-card-title>
+              MCDDC Chapel, Calamba, Laguna, Philippines
+            </ion-card-content>
+            <ion-card-content class="past-ion-card-content">
+              <ion-card-title><ion-icon name="cube-outline" class="box-icon"></ion-icon>test</ion-card-title>
+              Mayapa, Calamba, Laguna, Philippines
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-no-padding">
+          <ion-card class="custom-card-margin">
+            <ion-card-header class="custom-card-padding">
+              <ion-item class="ion-no-padding ion-no-margin">
+                <ion-label>PADALA</ion-label>
+                <ion-label class="ion-text-end" color="danger">Nov 13, 2023</ion-label>
+              </ion-item>
+            </ion-card-header>
+
+            <ion-card-content class="past-ion-card-content">
+              <ion-card-title>
+                <ion-icon name="location-sharp" class="location-icon"></ion-icon><span style="color: #a11b1f;">Vince LEX
+                  QA</span></ion-card-title>
+              MCDDC Chapel, Calamba, Laguna, Philippines
+            </ion-card-content>
+            <ion-card-content class="past-ion-card-content">
+              <ion-card-title><ion-icon name="cube-outline" class="box-icon"></ion-icon>test</ion-card-title>
+              Mayapa, Calamba, Laguna, Philippines
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+    </div>
+    <div *ngIf="selectedSegment === 'cancelled'">
+      <h3>Cancelled</h3>
+    </div>
+  </ion-grid>
+
+
+</ion-content>

@@ -1,0 +1,83 @@
+h1 {
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 20px;
+  color: #a11b1f;
+}
+
+ion-item {
+  font-weight: bold;
+}
+
+.custom-card-padding {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 0px;
+  padding-bottom: 16px;
+}
+
+.custom-card-margin {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+ion-segment-button {
+  --background: #f5f5f5;
+  --indicator-color: #a11b1f;
+  --padding-start: 35px;
+  --padding-end: 35px;
+}
+
+/* Material Design styles */
+ion-segment-button.md {
+  --color: #000;
+  --color-checked: #08a391;
+  --indicator-height: 4px;
+}
+
+/* iOS styles */
+ion-segment-button.ios {
+  --color-checked: #fff;
+  --border-radius: 20px;
+  --indicator-transition: none;
+}
+
+ion-item {
+  display: flex;
+  justify-content: space-between;
+  --inner-padding-end: 0px;
+  position: relative;
+}
+
+.location-icon {
+  font-size: 25px;
+  position: absolute;
+  top: 10px;
+  right: calc(100% + 4px); /* Adjust this value based on your preference */
+  transform: translateY(-50%); /* Center vertically */
+  padding: 4px; /* Adjust padding based on your preference */
+}
+.box-icon {
+  background-color: #ffffff;
+  font-size: 25px;
+  position: absolute;
+  top: 10px;
+  right: calc(100% + 4px); /* Adjust this value based on your preference */
+  transform: translateY(-50%); /* Center vertically */
+  padding: 4px; /* Adjust padding based on your preference */
+}
+
+.past-ion-card-content {
+  margin-top: 0px;
+  margin-left: 16px;
+  padding-top: 0px;
+  border-left-style: dashed;
+  border-color: #e6e36a;
+}
+
+ion-card-title {
+  font-size: 1rem;
+  padding-bottom: 5px;
+}
