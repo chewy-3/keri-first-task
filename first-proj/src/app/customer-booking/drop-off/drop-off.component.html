@@ -1,0 +1,35 @@
+<ion-content>
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col>
+        <ion-img class="map-wrapper" src="../../../assets/icon/map1.png" alt="map"></ion-img>
+        <ion-button fill="clear" class="custom-button" [routerLink]="['/customer-booking']" (click)="cancel()"><ion-icon
+            color="danger" slot="icon-only" name="close-circle"></ion-icon></ion-button>
+        <ion-icon color="danger" class="pin-icon" name="location-sharp"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-searchbar animated="true" placeholder="Enter your address"></ion-searchbar>
+
+        <ion-item lines="none">
+          <ion-icon name="location-sharp" aria-hidden="true" color="danger"></ion-icon>
+          <ion-label class="ion-padding-horizontal">
+            <h4>Heritage Memorial Park Taguig City</h4>
+            <p>Taguig City</p>
+          </ion-label>
+        </ion-item>
+        <div class="div-border ion-margin-top"></div>
+
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-padding">
+        <ion-button (click)="confirm()" class="next-page-button" shape="round"><span
+            style="font-weight: 600; color: white;">Add
+            Address</span></ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

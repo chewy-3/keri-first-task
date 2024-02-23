@@ -1,0 +1,225 @@
+<ion-header [translucent]="true">
+
+</ion-header>
+
+<ion-backdrop part="backdrop"></ion-backdrop>
+
+<ion-modal part="backdrop" id="example-modal" #modal1 [isOpen]="true">
+  <ng-template>
+    <div class="wrapper">
+      <h2>Your Keri Rider</h2>
+
+      <!-- <ion-list lines="none">
+        <ion-item button="true" detail="false" (click)="modal1.dismiss()">
+          <ion-icon name="person-circle"></ion-icon>
+          <ion-label>Item 1</ion-label>
+        </ion-item> -->
+
+      <img src="../../assets/exclusive-pixs-of-michael-jackson-on-bright-from-sydney-to-melbourne-.jpg" alt="shapes">
+      <h4>Michael Jackson</h4>
+      <p class="ion-no-margin">5<img src="../../assets/rating-filled.png" alt="star"> </p>
+      <p>Heeheee</p>
+      <!-- </ion-list> -->
+    </div>
+  </ng-template>
+</ion-modal>
+
+<ion-content [fullscreen]="true">
+  <div class="img-wrapper">
+    <img class="map-background" src="../../assets/icon/map1.png" alt="map">
+    <img class="rider-icon" src="../../assets/e-trike.png" alt="rider icon">
+  </div>
+
+  <ion-fab slot="fixed" vertical="top" horizontal="start">
+    <ion-fab-button size="small" (click)="navigate()" (click)="firstmodal.dismiss()">
+      <ion-icon name="close-sharp"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+
+
+  <!-- First Modal -->
+
+
+  <ion-modal id="first-modal" [showBackdrop]="false" [isOpen]="true" [initialBreakpoint]="0.20" [breakpoints]="[0.20]"
+    [backdropBreakpoint]="1" handle="false" #firstmodal>
+    <ng-template>
+      <ion-content>
+        <ion-header>
+          <ion-toolbar class="ion-no-padding">
+            <ion-buttons class="chevron-arrow"> <!-- Arrow button to open 2nd modal -->
+              <ion-button id="open-modal" aria-label="Favorite"><ion-icon name="chevron-up-outline"
+                  aria-hidden="true"></ion-icon></ion-button>
+            </ion-buttons>
+
+            <!-- 2nd Modal nested inside ion-header -->
+
+            <ion-modal id="second-modal" [keepContentsMounted]="true" trigger="open-modal" #modal>
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar class="ion-no-padding">
+                    <ion-buttons class="chevron-arrow">
+                      <ion-button (click)="modal.dismiss()"><ion-icon
+                          name="chevron-down-outline"></ion-icon></ion-button>
+
+                      <ion-button class="close-button" slot="end"><ion-icon size="large"
+                          name="close-circle"></ion-icon></ion-button>
+
+                    </ion-buttons>
+
+
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+
+                  <ion-card>
+                    <ion-card-header class="ion-no-padding ion-padding-horizontal ion-padding-top">
+                      <ion-item class="custom-ion-item-background ion-no-padding ion-no-margin">
+                        <ion-label class="label-text-custom">Booking Details</ion-label>
+                      </ion-item>
+                    </ion-card-header>
+                    <ion-grid>
+                      <ion-row>
+                        <ion-col class="ion-padding-bottom ion-no-padding">
+                          <ion-item class="custom-ion-item-background custom-padding" lines="none">
+                            <ion-avatar slot="start">
+                              <ion-img
+                                src="../../assets/exclusive-pixs-of-michael-jackson-on-bright-from-sydney-to-melbourne-.jpg"></ion-img>
+                            </ion-avatar>
+                            <ion-label>
+
+                              <h2>Michael Jackson</h2>
+                              <img src="../../assets/rating-filled.png" alt="star">
+                              <img src="../../assets/rating-filled.png" alt="star">
+                              <img src="../../assets/rating-filled.png" alt="star">
+                              <img src="../../assets/rating-filled.png" alt="star">
+                              <img src="../../assets/rating-filled.png" alt="star">
+
+                            </ion-label>
+                            <ion-button class="item-button-2ndmodal" color="dark" slot="end"> <ion-icon
+                                name="call-outline"></ion-icon>
+                            </ion-button>
+                            <ion-button class="item-button-2ndmodal" color="dark" slot="end"> <ion-icon
+                                name="chatbubble-outline"></ion-icon>
+                            </ion-button>
+                          </ion-item>
+
+                        </ion-col>
+                      </ion-row>
+
+                      <ion-row>
+                        <ion-col class="ion-padding-horizontal">
+                          <ion-icon class="location-icon" name="location" color="black"></ion-icon>
+                          <ion-icon class="store-icon" name="storefront-outline" color="black"></ion-icon>
+                          <div class="card-container">
+                          </div>
+                          <ion-item class="custom-ion-item-background  user-loc" lines="none">
+                            <ion-label class="ion-padding-start">
+                              <h6 class="ion-no-margin" style="color: #a11b1f; font-weight: 600;">Memorial Park Taguig
+                                City</h6>
+                              <p>
+
+                                Taguig City, Philippines
+                              </p>
+                            </ion-label>
+
+                          </ion-item>
+
+
+                          <ion-item class="custom-ion-item-background  sender-loc" lines="none">
+                            <ion-label class="ion-padding-start ion-no-margin ion-margin-top">
+                              <h6 class="ion-no-margin" style="color: #a11b1f; font-weight: 600;">Bonifacio Global City
+                              </h6>
+
+                              <p>Taguig City, Philippines</p>
+
+                            </ion-label>
+                          </ion-item>
+
+                        </ion-col>
+
+                      </ion-row>
+                      <ion-row>
+                        <ion-col class="ion-padding-top ion-padding-horizontal">
+                          <ion-label>
+                            <span style="color: black; font-weight: 550;"> Other details</span>
+
+                          </ion-label>
+
+                          <ion-icon class="custom-padding-icon" (click)="toggleDescription()" color="primary"
+                            name="chevron-down-outline">
+                          </ion-icon>
+
+                          <div class="ion-padding-top" *ngIf="showDescription">
+                            <p class="custom-p" style="margin-left: 0px;">
+                              Keri Share</p>
+
+                            <p class="custom-p" style="margin-left: 10px;">
+                              Favorite Rider</p>
+                          </div>
+
+                        </ion-col>
+                      </ion-row>
+                      <ion-row class="ion-margin ion-no-padding">
+                        <ion-col class="ion-no-padding">
+                          <ion-card-header class="ion-no-padding">
+                            <ion-item class="custom-ion-item-background ion-no-padding ion-no-margin">
+                              <ion-label class="label-text-custom">Payment Details</ion-label>
+                            </ion-item>
+                          </ion-card-header>
+                          <div class="custom-h6">
+                            <h6 class="ion-margin-top" style="color: black; font-weight: 600;">Total Fee</h6>
+                            <h6 class="ion-margin-top" style="color: black; font-weight: 600;">PHP 70</h6>
+                          </div>
+                          <ion-button [routerLink]="['./rating-page']" class="ion-padding-top rate-button">Rate your
+                            driver</ion-button>
+                        </ion-col>
+                      </ion-row>
+                    </ion-grid>
+                  </ion-card>
+
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+
+            <!-- Texts on the 1st Modal -->
+
+            <ion-grid class="ion-no-padding">
+              <ion-row>
+                <ion-col class="ion-text-center ion-align-items-start">
+                  <h3 class="ion-no-margin" style="color: #a11b1f; font-weight: 600;">ETA 11 Minute/s</h3>
+                  <h6 class="ion-no-margin" style="color: var(--ion-color-button-shade);">Rider is on the way to your
+                    location</h6>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-toolbar>
+        </ion-header>
+
+        <ion-row>
+          <ion-col>
+            <ion-item class="custom-padding" lines="none">
+              <ion-avatar slot="start">
+                <ion-img
+                  src="../../assets/exclusive-pixs-of-michael-jackson-on-bright-from-sydney-to-melbourne-.jpg"></ion-img>
+              </ion-avatar>
+              <ion-label>
+
+                <h2>Michael Jackson</h2>
+
+
+              </ion-label>
+              <ion-button class="item-button" slot="end"> <ion-icon name="call-outline" size="default"></ion-icon>
+              </ion-button>
+              <ion-button class="item-button" slot="end"> <ion-icon name="chatbubble-outline" size="default"></ion-icon>
+              </ion-button>
+            </ion-item>
+
+          </ion-col>
+        </ion-row>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+
+</ion-content>

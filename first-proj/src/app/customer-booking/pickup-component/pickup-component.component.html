@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="medium" (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-title>User details</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-label>
+    <h2 class="ion-padding">Before we proceed, please fill in the required fields below.</h2>
+  </ion-label>
+  <ion-item>
+    <ion-input class="label-text-custom" labelPlacement="stacked" label="Name"
+      placeholder="Enter your name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input class="label-text-custom" labelPlacement="stacked" label="Sex" placeholder="Sex"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input class="label-text-custom" labelPlacement="stacked" label="Contact Number"
+      placeholder="Enter contact number"></ion-input>
+  </ion-item>
+
+  <div class="input-email">
+    <ion-input class="ion-margin-horizontal label-text-custom" type="email" fill="solid" label="Email"
+      labelPlacement="stacked" helperText=" Enter a valid email" errorText="Invalid email" ngModel email></ion-input>
+  </div>
+
+
+
+  <ion-label>
+    <p class="ion-padding">By continuing, you confirm you've read and agree to our <span style="color: blue;">Terms of
+        Service</span> and
+      <span style="color: blue;">Privacy Notice</span>
+      on how we collect, use disclose, and process your personal data.
+    </p>
+  </ion-label>
+
+  <ion-button class="next-page-button ion-margin-top ion-padding" (click)="confirm()" shape="round"><span
+      style="font-weight: 600; color: white;">Next</span></ion-button>
+
+</ion-content>
+
+<!--   <ion-item>
+    <ion-input class="label-text-custom" labelPlacement="stacked" label="Pick Up Location" [(ngModel)]="newLocation"
+      placeholder="Enter Pick Up Location"></ion-input>
+  </ion-item> 
+-->

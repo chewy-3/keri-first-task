@@ -1,0 +1,21 @@
+ion-item {
+  --padding-end: 16px !important;
+  --inner-padding-end: 0px !important;
+  --padding-bottom: 16px;
+}
+
+.label-text-custom {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.input-email {
+  width: 100%;
+  margin-right: 16px;
+  padding-right: 30px;
+}
+
+.next-page-button {
+  width: 100%;
+  --background: #a11b1f;
+}
